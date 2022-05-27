@@ -1,46 +1,44 @@
 @font-face {
-    font-family: 'Exo2.0';
-    src: url("../font/Exo2.0-Thin.otf");
+  font-family: 'Exo2.0';
+  src: url("../font/Exo2.0-Thin.otf");
 }
 
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.page {
+  background-image: url("../img/Pattern.png");
+  overflow: auto;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
 
 .container {
-    background-image: url("../img/Pattern.png");
-    overflow: auto;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-content: center;
+  max-width: 1280px;
+  max-height: 680px;
 }
 
-.wrapper {
-    max-width: 1280px;
-    max-height: 680px;
+
+.header__title {
+  height: 44px;
+  margin: 36px 80px 25px 80px;
+  font-family: 'Exo2.0';
+  color: #fff;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  text-shadow: 0px 1px 1px #000000;
 }
 
-.heading {
-    /* width: 1120px; */
-    height: 44px;
-    margin: 36px 80px 25px 80px; 
-}
-
-.heading__title {
-    font-family: 'Exo2.0';
-    color: #fff;
-    font-size: 36px;
-    line-height: 42px;
-    text-align: center;
-    text-shadow: 0px 1px 1px #000000;
-}
 .content {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap; 
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap; 
 }
   
 .card-wrapper {
@@ -197,7 +195,7 @@
   .wrapper {
     width: 80%;
   }
-  .heading {
+  .header__title {
     height: auto;
     margin-left: auto;
     margin-right: auto;
@@ -226,11 +224,11 @@
   .wrapper {
     width: 50%;
   }
-  .heading {
+  /* .heading {
     height: auto;
     margin-left: auto;
     margin-right: auto;
-  }
+  } */
 
   .content {
     flex-wrap: wrap;
@@ -252,14 +250,14 @@
 
 /* Landscape phones and portrait tablets */
 @media (max-width: 767px) {
-  .wrapper {
+  /* .wrapper {
     width: 50%;
   }
   .heading {
     height: auto;
     margin-left: auto;
     margin-right: auto;
-  }
+  } */
 
   .content {
     flex-wrap: wrap;
@@ -284,11 +282,11 @@
   .wrapper {
     width: 40%;
   }
-  .heading {
+  /* .heading {
     height: auto;
     margin-left: auto;
     margin-right: auto;
-  }
+  } */
 
   .content {
     flex-wrap: wrap;
