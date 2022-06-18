@@ -1,88 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Нямшука</title>
-    <link rel="icon" type="image/png" href="./img/favicon.png"> 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <script src="app.js" defer></script> 
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Нямушка</title>
+  <link rel="icon" type="image/png" href="./img/favicon.png"> 
+  <link rel="stylesheet" href="./style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@100&display=swap" rel="stylesheet">
+  <script src="./script.js" defer></script> 
 </head>
-<body class="page">
-  <div class="container">
-    <button class="disabled">Disabled</button>
-    <button class="reload">Reload</button>
-    <header class="header">
-      <h1 class="header__title">Ты сегодня покормил кота?</h1>
-    </header>
-    <div class="content">
-        <!-- first -->
-      <div class="card-wrapper" id ="first-wrap"> 
-        <div class="card first-card" id="first">
-          <div class="delicacy">
-              <div class="triangle-hero">
-                <div class="triangle"></div>
-                <div class="hero">Сказочное заморское яство</div>
+<body>
+  <header class="header">
+    <div class="container">
+      <button class="disabled">Disabled</button>
+      <button class="reload">Reload</button>
+      <h1 class="hedaer__title">Ты сегодня покормил кота?</h1>
+    </div>
+  </header>
+  <main class="main">
+    <div class="container">
+      <div class="content-wrapper">
+        <section class="card-content">
+          <div class="card-wrapper">
+            <div class="card-border" data-taste="duck">
+              <div class="card">
+                <p class="card__hero-text">
+                    Сказочное заморское яство
+                </p>
+                <h2 class="card__title">Нямушка</h2>
+                <p class="card__subtitle">с фуа-гра</p>
+                <p class="card__description">10 порций<br> мышь в подарок</p>
+                <div class="card__oval">
+                  <p class="oval-content-num">0,5</p>
+                  <p class="oval-content-text">кг</p>
+                </div>
               </div>
-              <div class="brand-name">Нямушка</div>
-              <div class="filling">с фуа-гра</div>
-              <div class="bonus">10 порций <br>мышь в подарок</div>
+            </div>
+              <p class="card-tagline">Чего сидишь? Порадуй котэ,
+                <span class="card-tagline__btn">купи.</span>
+              </p>
           </div>
-          <div class="oval">
-            <div class="weight">0,5</div>
-            <div class="weight-kg">кг</div>
-          </div>
-        </div>
-        <p class="buy" id="text-link-one">Чего сидишь? Порадуй котэ, <a id="first-buy" href="#">купи.</a></p>
-        <p class="buy-select" id="text-link-one">Печень утки разварная с артишоками.</p>
-        <p class="buy-disabled" id="text-link-one">Печалька, с фуа-гра закончился.</p>
-    </div> 
-      <!-- second -->
-      <div class="card-wrapper" id="second-wrap">
-        <div class="card second-card" id="second">
-          <div class="delicacy">
-              <div class="triangle-hero">
-                <div class="triangle"></div>
-                <div class="hero">Сказочное заморское яство</div>
+        </section>
+  
+        <section class="card-content">
+          <div class="card-wrapper">
+            <div class="card-border" data-taste="fish">
+              <div class="card">
+                <p class="card__hero-text">
+                  Сказочное заморское яство
+                </p>
+                <h2 class="card__title">Нямушка</h2>
+                <p class="card__subtitle">с рыбой</p>
+                <p class="card__description">40 порций<br> 2 мыши в подарок</p>
+                <div class="card__oval">
+                  <p class="oval-content-num">2</p>
+                  <p class="oval-content-text">кг</p>
+                </div>
               </div>
-              <div class="brand-name">Нямушка</div>
-              <div class="filling">с рыбой</div>
-              <div class="bonus">40 порций <br>2 мыши в подарок</div>
             </div>
-            <div class="oval">
-              <div class="weight">2</div>
-              <div class="weight-kg">кг</div>
-            </div>
+              <p class="card-tagline">Чего сидишь? Порадуй котэ,
+                <span class="card-tagline__btn">купи.</span></p>
           </div>
-          <p class="buy" id="text-link-two">Чего сидишь? Порадуй котэ, <a id="second-buy" href="#">купи.</a></p>
-          <p class="buy-select" id="text-link-two">Головы щучьи с чесноком да свежайшая сёмгушка.</p>
-          <p class="buy-disabled" id="text-link-two">Печалька, с рыбой закончился.</p>
+        </section>
+  
+        <section class="card-content">
+          <div class="card-wrapper">
+            <div class="card-border"  data-taste="chiken">
+              <div class="card">
+                <p class="card__hero-text">
+                    Сказочное заморское яство
+                </p>
+                <h2 class="card__title">Нямушка</h2>
+                <p class="card__subtitle">с курой</p>
+                <p class="card__description">
+                    100 порций<br> 5 мышей в подарок<br> заказчик доволен
+                </p>
+                <div class="card__oval">
+                  <p class="oval-content-num">5</p>
+                  <p class="oval-content-text">кг</p>
+                </div>
+              </div>
+            </div>
+              <p class="card-tagline">Чего сидишь? Порадуй котэ,
+                <span class="card-tagline__btn">купи.</span></p>
+          </div>
+        </section>
       </div>
-        <!-- third -->
-      <div class="card-wrapper" id="third-wrap">
-        <div class="card third-card" id="third">
-          <div class="delicacy">
-              <div class="triangle-hero">
-                <div class="triangle"></div>
-                <div class="hero">Сказочное заморское яство</div>
-              </div>
-              <div class="brand-name">Нямушка</div>
-              <div class="filling">с курой</div>
-              <div class="bonus">100 порций <br>5 мышей в подарок <br>заказчик доволен</div>
-            </div>
-            <div class="oval">
-              <div class="weight">5</div>
-              <div class="weight-kg">кг</div>
-            </div>
-        </div>
-        <p class="buy" id="text-link-three">Чего сидишь? Порадуй котэ, <a id="third-buy" href="#">купи.</a></p>
-        <p class="buy-select" id="text-link-three">Филе из цыплят с трюфелями в бульоне.</p>
-        <p class="buy-disabled" id="text-link-three">Печалька, с курой закончился.</p>
-      </div>
-    <!-- end third -->
-  </div>
-  </div>
+    </div>
+  </main>
 </body>
 </html>

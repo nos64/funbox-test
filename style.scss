@@ -198,3 +198,23 @@ body {
 .text-selected-hover {
   color: var(--selected-hover);
 }
+
+.disabled,
+ .reload {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+.card-disabled {
+  background-image: url("./img/Photo-50.png");
+  color: var(--font-disabled);
+}
+
+.text-disabled {
+  color: var(--font-disabled);
+}
+
+.background-disabled {
+  background-color: var(--font-disabled);
+}

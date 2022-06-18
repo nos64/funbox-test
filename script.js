@@ -1,6 +1,5 @@
 
 const cards = document.querySelectorAll('.card-border');
-const cardBtns = document.querySelectorAll('.card-tagline__btn');
 
 const addHoverBtn = function () {
   const btn = this.parentNode.parentNode.querySelector('.card-border');
@@ -25,7 +24,6 @@ const addClickBtn = function () {
   const border = btn;
   const oval =  btn.querySelector('.card__oval');
   const cardtext =  btn.parentNode.querySelector('.card-tagline');
-  const cardBtn = btn.parentNode.querySelector('.card-tagline__btn');
 
   if (!btn.classList.contains('card-selected')) {
     btn.classList.add('card-selected');
@@ -86,8 +84,6 @@ const addClick = function () {
   const border =  card;
   const oval = card.querySelector('.card__oval');
   const cardText = card.parentNode.querySelector('.card-tagline');
-  const cardBtn = card.parentNode.querySelector('.card-tagline__btn');
-
 
   if (!card.classList.contains('card-selected')) {
     card.classList.add('card-selected');
@@ -107,6 +103,7 @@ const addClick = function () {
     border.classList.remove('background-selected-hover');
     oval.classList.remove('background-selected-hover');
     cardText.innerHTML = `Чего сидишь? Порадуй котэ, `;
+
     const span = document.createElement('span');
     span.textContent = 'купи.';
     span.className = 'card-tagline__btn';
@@ -136,10 +133,55 @@ cards.forEach(card => {
   btn.addEventListener('mouseout', removeHoverBtn);
   addClickBtn.bind(btn);
   btn.addEventListener('click', addClickBtn); 
-
 });
 
 
+
+const disabled = function () {
+    const card = this;
+    back = card.querySelector('.card')
+    console.log(' back: ', back);
+    const border =  card;
+    const oval = card.querySelector('.card__oval');
+    const cardText = card.parentNode.querySelector('.card-tagline');
+  
+    if (!card.classList.contains('card-disabled')) {
+      back.classList.add('card-disabled');
+      border.classList.add('background-disabled');
+      oval.classList.add('background-disabled');
+      if (card.dataset = 'duck') {
+        cardText.textContent = '111.';
+      } else if (card.dataset = 'fish') {
+        cardText.textContent = '222.';
+      } else if (card.dataset = 'chiken') {
+        cardText.textContent = '3.';
+      }
+    } else {
+      card.classList.remove('card-disabled');
+      border.classList.remove('background-disabled');
+      oval.classList.remove('background-disabled');
+      // border.classList.remove('background-selected-hover');
+      // oval.classList.remove('background-selected-hover');
+      cardText.innerHTML = `Чего сидишь? Порадуй котэ, `;
+  
+      const span = document.createElement('span');
+      span.textContent = 'купи.';
+      span.className = 'card-tagline__btn';
+      cardText.append(span);
+  
+      addHoverBtn.bind(span);
+      span.addEventListener('mouseover', addHoverBtn);
+      removeHoverBtn.bind(span);
+      span.addEventListener('mouseout', removeHoverBtn);
+      addClickBtn.bind(span);
+      span.addEventListener('click', addClickBtn); 
+    }
+  };
+
+cards.forEach(card => {
+  disabled.bind(card)
+  card.addEventListener('dblclick', disabled); 
+})
 
 
 
