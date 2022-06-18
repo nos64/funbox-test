@@ -171,8 +171,7 @@ body {
   transition: all .3s ease-in-out;
 }
 
-.background-hover,
-.card__oval-hover {
+.background-hover {
   background-color: var(--hover);
 }
 
@@ -180,18 +179,22 @@ body {
   color: var(--hover);
 }
 
-// .card:hover .card__oval {
-//   background-color: var(--hover);
-// }
-
-// .card:hover .card-tagline.card-tagline__btn {
-//   color: var(--hover);
-// }
-
 .card-tagline__btn:hover {
   color: var(--hover);
 }
-.card-tagline__btn:hover ~ .card-border >.card > .card__oval {
-  color: var(--hover);
+
+.background-selected {
+  background-color: var(--selected);
 }
 
+.text-selected {
+  color: var(--selected);
+}
+
+.background-selected-hover {
+  background-color: var(--selected-hover);
+}
+
+.text-selected-hover {
+  color: var(--selected-hover);
+}
