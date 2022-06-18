@@ -38,32 +38,8 @@ const addClickBtn = function () {
     } else if ( btn.dataset = 'chiken') {
       cardtext.textContent = 'Филе из цыплят с трюфелями в бульоне.';
     }
-
   }
-  // else {
-  // //   card.classList.remove('card-selected');
-  // //   border.classList.remove('background-selected');
-  // //   oval.classList.remove('background-selected');
-  // //   border.classList.remove('background-selected-hover');
-  // //   oval.classList.remove('background-selected-hover');
-  //     cardtext.innerHTML = `Чего сидишь? Порадуй котэ,
-  //       <span class="card-tagline__btn">купи.</span>`;
-
-      
-  // }
-
 };
-
-// cardBtns.forEach(btn => {
-//   addHoverBtn.bind(btn);
-//   btn.addEventListener('mouseover', addHoverBtn);
-//   removeHoverBtn.bind(btn);
-//   btn.addEventListener('mouseout', removeHoverBtn);
-//   addClickBtn.bind(btn);
-//   btn.addEventListener('click', addClickBtn); 
-// });
-
-
 
 const addHover = function () {
   const card = this;
@@ -153,12 +129,13 @@ cards.forEach(card => {
   addClick.bind(card);
   card.addEventListener('click', addClick); 
 
-  addHoverBtn.bind(card.parentNode.querySelector('.card-tagline__btn'));
-  card.parentNode.querySelector('.card-tagline__btn').addEventListener('mouseover', addHoverBtn);
-  removeHoverBtn.bind(card.parentNode.querySelector('.card-tagline__btn'));
-  card.parentNode.querySelector('.card-tagline__btn').addEventListener('mouseout', removeHoverBtn);
-  addClickBtn.bind(card.parentNode.querySelector('.card-tagline__btn'));
-  card.parentNode.querySelector('.card-tagline__btn').addEventListener('click', addClickBtn); 
+  const btn = card.parentNode.querySelector('.card-tagline__btn');
+  addHoverBtn.bind(btn);
+  btn.addEventListener('mouseover', addHoverBtn);
+  removeHoverBtn.bind(btn);
+  btn.addEventListener('mouseout', removeHoverBtn);
+  addClickBtn.bind(btn);
+  btn.addEventListener('click', addClickBtn); 
 
 });
 
