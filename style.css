@@ -94,6 +94,9 @@ body {
           clip-path: polygon(15% 0, 100% 0, 100% 0, 100% 100%, 100% 100%, 0 100%, 0 100%, 0 10%);
   background-color: var(--default);
   border-radius: 10px;
+  cursor: pointer;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
 .card {
@@ -158,6 +161,8 @@ body {
   border-radius: 50%;
   background-color: var(--default);
   color: var(--font-white);
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
 .oval-content-num {
@@ -180,8 +185,27 @@ body {
 }
 
 .card-tagline__btn {
-  color:var(--default);
-  text-decoration: underline dotted;
+  color: var(--default);
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
   cursor: pointer;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
 }
-/*# sourceMappingURL=style.css.map */
+
+.background-hover,
+.card__oval-hover {
+  background-color: var(--hover);
+}
+
+.text-hover {
+  color: var(--hover);
+}
+
+.card-tagline__btn:hover {
+  color: var(--hover);
+}
+
+.card-tagline__btn:hover ~ .card-border > .card > .card__oval {
+  color: var(--hover);
+}
