@@ -1,4 +1,4 @@
-
+'use strict'
 const cards = document.querySelectorAll('.card-border');
 
 const addHoverBtn = function () {
@@ -29,11 +29,11 @@ const addClickBtn = function () {
     obj.classList.add('card-selected');
     border.classList.add('background-selected');
     oval.classList.add('background-selected');
-    if (obj.dataset = 'duck') {
+    if (obj.dataset.taste === 'duck') {
       cardtext.textContent = 'Печень утки разварная с артишоками.';
-    } else if ( obj.dataset = 'fish') {
+    } else if ( obj.dataset.taste === 'fish') {
       cardtext.textContent = 'Головы щучьи с чесноком да свежайшая сёмгушка.';
-    } else if ( obj.dataset = 'chiken') {
+    } else if ( obj.dataset.taste === 'chiken') {
       cardtext.textContent = 'Филе из цыплят с трюфелями в бульоне.';
     }
   }
