@@ -235,10 +235,15 @@ body {
 .card-disabled {
   background-image: url("./img/Photo-50.png");
   color: var(--font-disabled);
+  cursor: auto;
 }
 
 .text-disabled {
   color: var(--font-disabled);
+}
+
+.text-disabled-yellow {
+  color: var(--font-yellow);
 }
 
 .background-disabled {
