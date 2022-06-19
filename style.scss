@@ -28,6 +28,7 @@
 html {
   box-sizing:border-box;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 *,
@@ -49,7 +50,6 @@ p {
 }
 
 body {
-  overflow: auto;
   width: 100vw;
   height: 100vh;
   font-family: 'Trebuchet MS', sans-serif;
