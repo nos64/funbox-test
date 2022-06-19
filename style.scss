@@ -22,6 +22,7 @@
 --font-white: #fff;
 --font-disabled: #b3b3b3;
 --font-yellow: #ffff66;
+--background-color: #f2f2f2;
 }
 
 html {
@@ -97,7 +98,7 @@ body {
   width: 320px;
   height: 480px;
   padding-left: 48px;
-  background-color: var(--font-white);
+  background-color: var(--background-color);
   background-image: url("./img/Photo.png");
   background-repeat: no-repeat;
   background-position: center 213px;
